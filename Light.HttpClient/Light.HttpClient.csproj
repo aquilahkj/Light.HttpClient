@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{5A14336B-CFE0-4196-8426-A1810F04D2EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Light.HttpClient</RootNamespace>
+    <AssemblyName>Light.HttpClient</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="BufferData.cs" />
+    <Compile Include="BufferDataPool.cs" />
+    <Compile Include="ConvertUtility.cs" />
+    <Compile Include="HttpAsyncResult.cs" />
+    <Compile Include="HttpConfig.cs" />
+    <Compile Include="HttpConnection.cs" />
+    <Compile Include="HttpConnectionPool.cs" />
+    <Compile Include="HttpException.cs" />
+    <Compile Include="HttpExceptionStatus.cs" />
+    <Compile Include="HttpMethod.cs" />
+    <Compile Include="HttpMission.cs" />
+    <Compile Include="HttpProcessAsyncResult.cs" />
+    <Compile Include="HttpRequestPackage.cs" />
+    <Compile Include="HttpResponsePackage.cs" />
+    <Compile Include="HttpWebClient.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="SocketArgsPool.cs" />
+    <Compile Include="HttpContentType.cs" />
+    <Compile Include="HttpProtocol.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net" />
+    <Reference Include="System" />
+  </ItemGroup>
+</Project>
